@@ -2,7 +2,7 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-RUN requirement.txt ./
+COPY requirements.txt .
 
 RUN pip install --upgrade pip
 
@@ -12,4 +12,4 @@ COPY . .
 
 EXPOSE 8000
 
-CMD["gunicorn", "hng_task.wsgi", "--bind=0.0.0.0:8000"]
+CMD ["gunicorn", "hng_task.wsgi", "--bind=0.0.0.0:8000"]
