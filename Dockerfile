@@ -10,6 +10,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
+ENV DJANGO_SETTINGS_MODULE=hng_task.settings
+ENV SECRET_KEY=dummy-secret-key-for-build
+
 # Collect static files
 RUN python manage.py collectstatic --noinput
 
