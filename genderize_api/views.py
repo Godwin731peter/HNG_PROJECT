@@ -73,5 +73,5 @@ def task0(request):
     resp['ACCESS-CONTROL-ALLOW-ORIGIN'] = '*'
     return resp
 
-    def health(request):
-        return JsonResponse({'status': 'ok'})
+def health(request):
+    return JsonResponse({'status': 'ok'})
