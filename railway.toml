@@ -1,6 +1,6 @@
 [build]
 builder = "DOCKERFILE"
-dockerfilePath = "./Dockerfile"
+dockerfilePath = "./Dockerfile.web"
 
 [deploy]
 startCommand = "gunicorn hng_task.wsgi:application --bind 0.0.0.0:$PORT"
